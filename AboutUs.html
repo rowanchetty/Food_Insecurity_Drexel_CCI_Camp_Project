@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>About Us</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+      .textbox-container {
+    display: flex; /* Use flex display to put the textboxes side by side */
+    justify-content: space-between; /* Adjust the spacing between textboxes as needed */
+    flex-wrap: wrap; /* Allow the textboxes to wrap to a new line if the screen size is too small */
+  margin-top: 50px; /* Add some margin at the top */
+        
+  }
+
+   .rectangular-image {
+    width: 573px; /* Set the desired width for the rectangular image */
+    height: 584px; /* Set the desired height for the rectangular image */
+    object-fit: cover;
+    border-radius: 5px; /* You can adjust the border radius to your preference */
+  }
+
+   .circular-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Set border-radius to 50% to create a circle */
+    margin-top: -20px;
+    }
+    p {
+      font-weight: bold;
+      color: gray;
+    }
+
+    /* CSS for horizontal navigation bar */
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: #326831;
+    }
+
+    nav li {
+      margin: 0 10px;
+    }
+
+    nav a {
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    nav a:hover {
+      background-color: #ffffff;
+      color: #326831;
+    }
+
+    html {
+      height: 100%;
+      width: 100%;
+    }
+
+    header {
+      background-color: #326831;
+      color: #000000;
+      font-family: "Open Sans", "PT Sans", Calibri, Tahoma, sans-serif;
+      padding: 15px;
+      margin-top: 0.75%;
+      margin-bottom: 1%;
+      margin-left: 0%;
+      margin-right: 0%;
+      text-align: center;
+    }
+
+    body {
+      background-color: #ffffff;
+      font-family: "Open Sans", "PT Sans";
+    }
+
+  .white-title {
+   color: #ffffff; /* Set the text color to white for elements with the "white-title" class */
+  }
+h1 {
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+}
+    h2 {
+      color: black;
+      text-align: center;
+     margin-top: 20px;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 350px;
+      height: 250px;
+      perspective: 1000px;
+      display: flex;
+      margin: 1% 1% 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #F0F8FF;
+    }
+
+    .card-front {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+
+    .textbox {
+      padding: 10px;
+      margin: 10px;
+      width: 570px;
+      background-color: #ffffff;
+    }
+
+  .box {
+    border: 10px solid #316930;
+    padding: 50 px;
+  }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="AboutUs.html">About Us</a></li>
+      <li><a href="Donation.html">Donate</a></li>
+      <li><a href="Volunteer.html">Volunteer</a></li>
+      <li><a href="OtherResources.html">Other Resources</a></li>
+      <li><a href="FindFood.html">Find Food</a></li>
+      <li><a href="FAQ.html">FAQs</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1 class="white-title">Learn More About Our Team</h1>
+  </header>
+
+  <h1>Meet the Team</h1>
+
+  <div class="card-container">
+    <div class="card">
+      <div class="card-front">
+        <p>Hello! My name is Nikunj Patel (HCI) </p>
+        <img src="Nikunj.jpg" alt="Image Description" class="circular-image">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-front">
+        <p>Hej! My name is Rowan Chetty (Full Stack) </p>
+        <img src="Rowan.jpg" alt="Image Description" class="circular-image">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-front">
+        <p>Hola! My name is Nathaniel Gao (Data Science) </p>
+        <img src="Nathaniel.jpg" alt="Image Description" class="circular-image">
+      </div>
+    </div>
+
+    <!-- Add the missing card entries -->
+    <div class="card">
+      <div class="card-front">
+        <p>Hallo! My name is Keith Groves (Full Stack)</p>
+        <img src="Keith.jpg" alt="Image Description" class="circular-image">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-front">
+        <p>Bonjour! My name is Joseph Trotter (Data Science) </p>
+        <img src="Joseph.jpg" alt="Image Description" class="circular-image">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-front">
+        <p>Ciao! My name is Drexel CCI & Lecturers</p>
+        <img src="drexeldragon.png" alt="Image Description" class="circular-image">
+      </div>
+    </div>
+
+    <br>
+    <br>
+    
+    <div class="textbox-container">
+
+    <div class="textbox box">
+         <h1>The Problem</h1>
+
+      <p>Food insecurity threatens millions of people in the United States. Inadequate access to nutritious food can result in malnutrition, health problems, and a general decline in the well-being of individuals and families. Combating food insecurity is a critical mission for creating a healthier, more equitable society for all. According to Feeding America, nearly 34 million people in the U.S. were food insecure in 2021, including almost 9.0 million children. 
+</p>
+      <br>
+      <p>
+Upon further research, a few patterns could be drawn between food-insecure households and certain pre-existing factors. This includes their employment status and annual income, their race/ethnicity, and their previous health conditions. First, lets investigate the impact of one's job and income: more than a third of those who were living in poverty (below the Federal Poverty Line or FPL) did not have adequate access to foods, while those who were 185% or more above the FPL were significantly less likely to be food-insecure (roughly 5 percent). For reference, the average price of a healthy meal in the U.S. is estimated to be $3.09. Many individuals in the U.S. do not have the financial ability to consistently purchase nutritious foods, especially those who live in larger households or poverty-stricken areas. Furthermore, one's race/ethinicity is a strong indicator of a person's ability to access healthy meals; marginalized communities within the U.S. may face social and structural barriers that limit their access to resources and opportunities, exacerbating food insecurity. A study conducted by Dr. Odoms-Young saw a persistent gap in food security between people of colors and whites, with Black and Hispanic households being at least twice as likely to be food insecure. Similar results were found when assessing food insecurity among other racial minorities, with American Indians and Alaska Natives also facing such problems.
+    <br>
+    <br>
+
+ <img src="Food_Insecurity_Race.jpg" alt="Image Description" class="rectangular-image">
+    <br>
+    <br>
+
+The issue of food insecurity is deeply intertwined with systemic inequalities that persist in our society, disproportionately affecting the marginalized communities. Challenges to accessing healthy meals are often rooted in centuries of social and economic barriers, making it difficult to break from the vicious cycles of food insecurity. However, there are steps that can be taken to reduce the disparity; by providing more means of transportation, education, and employment, we can support marginilized communities in accessing nutritious meals.
+
+      </p>
+  </div>
+
+    <br>
+    <br>
+    <div class="textbox box">
+          <h1>Our Mission</h1>
+
+    <p>
+      
+    Since the founding of our institution, we have been dedicated to serving the communities of West Philadelphia. Food insecurity has been a pressing problem in our society and demands immediate change. Our organization is determined to provide a "one-stop shop" for anyone to access, with resources, volunteer sites, and food banks all accessible in one touch.
+    <br>
+    <br>
+
+      Drawing inspiration from the collective strength that lies within each member of our community, we have crafted a comprehensive framework that melds compassion with efficiency, ensuring that none are left behind in their pursuit of sustenance and empowerment. At the heart of this grand endeavor lies a profound belief in the power of unity, for we understand that true progress and lasting change are the fruits borne from the seeds of collaboration.
+    <br>
+    <br>
+
+      Even in the face of adversity, we do not falter; any challenges we face will be overcomed. As we continue our relentless fight to end food security, just remember that our journey knows no end. With every step we take, our resolve grows stronger and our commitment heightens. Until the end of time, we will fight; for us, we are on this noble endeavor, we will try with all our might.
+
+     
+
+
+    </p>
+    </div>
+    </div>
+
+
+
+
+
+  <footer>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <h4>  </h4>
+  <h2 class="white-title">Have Questions? Contact Us!</h2>
+    <h4>215-326-437<h4></h4>
+    <h4>stoppingfoodinsecurity@gmail.com<h4>
+    <h4>Disclaimer: This website is NOT real and just an academic project</h4>
+  </footer>
+    </body>
+    
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    /* CSS for horizontal navigation bar */
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: #326831;
+    }

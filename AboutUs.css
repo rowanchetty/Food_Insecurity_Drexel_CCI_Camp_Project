@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS to display cards in a row */
+    .cards-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    rectangular-image {
+    width: 100px; /* Set the desired width for the rectangular image */
+    height: 250px; /* Set the desired height for the rectangular image */
+    object-fit: cover;
+    border-radius: 5px; /* You can adjust the border radius to your preference */
+  }
+
+
+    .card {
+      width: 30%; /* Adjust the width as needed */
+      border: 1px solid #D4E1F0;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Meet the Team</h1>
+
+  <div class="cards-row">
+    <div class="card">
+      <div class="card-front">
+        <p>Hey! My name is Nikunj Patel</p>
+        <img src="Nikunj.jpg" alt="Image Description" class="custom-image">
+      </div>
+    </div>
+
+    <div class="card">

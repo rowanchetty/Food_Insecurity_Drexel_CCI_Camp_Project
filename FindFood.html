@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Food Insecurity Project</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    /* CSS for horizontal navigation bar */
+    nav {
+      background-color: #326831;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav li {
+      margin: 0 10px;
+    }
+
+    nav a {
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    nav a:hover {
+      background-color: #ffffff;
+      color: #326831;
+    }
+
+    /* Center the Google map iframe */
+    iframe {
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* CSS for cards */
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      margin-top: 30px;
+      /* Adjust the height of the container */
+      height: auto;
+    }
+
+    .card {
+      background-color: #f4f4f4;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      /* Set a fixed height for the cards */
+      height: 300px; /* Increase the height to accommodate the content */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-front {
+      display: flex;
+      justify-content: center;
+      align-items: center; /* Center the content vertically */
+      height: 100%; /* Occupy the full height of the card */
+    }
+
+    .card-title {
+      font-size: 22px;
+      color: #326831;
+      margin: 10px 0;
+    }
+
+    .card-back {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-desc {
+      font-size: 16px;
+      color: white;
+      margin-top: 10px;
+    }
+
+    /* CSS for flipping cards on hover */
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+
+    /* Apply the flipping effect on hover */
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px; /* Add padding to center the content */
+      box-sizing: border-box; /* Include padding in the width and height calculation */
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #326831;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Image style */
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+    }
+
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="AboutUs.html">About Us</a></li>
+      <li><a href="Donation.html">Donate</a></li>
+      <li><a href="Volunteer.html">Volunteer</a></li>
+      <li><a href="OtherResources.html">Other Resources</a></li>
+      <li><a href="FindFood.html">Find Food</a></li>
+      <li><a href="FAQ.html">FAQ's</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Use This Google Map To Find Directions To Food Banks [Located as the Red Pins]</h1>
+  </header>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d48935.74058892491!2d-75.19971536280919!3d39.95293506478904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sfood%20banks%20in%20west%20philadelphia!5e0!3m2!1sen!2sus!4v1689604770129!5m2!1sen!2sus"
+    width="1245" height="450" style="border:5;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+   <img src="busroute.png" alt="Image Description">
+
+    <div class="cards-container">
+        <!-- Card 1 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2 class="card-title title-1">Faith Chapel Baptist Church Food Pantry</h2>
+            </div>
+            <div class="card-back">
+              <h4 class="card-desc desc-1">Details:
+                4720 Woodland Ave, Philadelphia, PA 19143, #:215-724-5144,
+                Saturdays and Sundays, 10AM to 2PM, 
+                Provides breads, canned goods, poultry, etc
+              </h4>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2 class="card-title title-2">Cathedral Table Ministries Food Pantry</h2>
+            </div>
+            <div class="card-back">
+              <h4 class="card-desc desc-2">Details:
+                19 S 38th St, Philadelphia, PA 19104
+                215-386-0234
+                Monday, 9:30–11 AM
+              </h4>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2 class="card-title title-3">People's Emergency Center Food Pantry</h2>
+            </div>
+            <div class="card-back">
+              <h4 class="card-desc desc-3">Details:
+                325 N 39th St, Philadelphia, PA 19104
+                267-777-5880
+                Thursday, 10 AM–12 PM
+                Choice Pantry (guests may self-choose products on shelves)
+                Also provides nutrition/cooking classes, SNAP screenings, employment center, computer classes
+              </h4>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Add more cards here... -->
+    
+        <!-- Card 4 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2 class="card-title title-4">Mantua Scattered Site Tenant Council Food Pantry</h2>
+            </div>
+            <div class="card-back">
+              <h4 class="card-desc desc-4">Details:
+                3802 Mt Vernon St, Philadelphia, PA 19104
+                267-242-0989
+                Tuesday. Wednesday, Thursday, 11AM to 1PM
+                Provides grocery-style items such as canned food, fresh produce, and dry goods like pasta or rice
+              </h4>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Add more cards here... -->
+    
+        <!-- Card 5 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2 class="card-title title-5">Grace Evangelical Lutheran Church Food Pantry</h2>
+            </div>
+            <div class="card-back">
+              <h4 class="card-desc desc-5">Details:
+                3529 Haverford Ave, Philadelphia, PA 19104
+                215-222-3570
+                Wednesday, 10 AM–12:30 PM
+                Drive-thru system, provides shelf-stable foods
+              </h4>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Add more cards here... -->
+    
+        <!-- Card 6 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2 class="card-title title-6">Mount Zion United Holy Church Food Pantry</h2>
+            </div>
+            <div class="card-back">
+              <h4 class="card-desc desc-6">Details:
+                4110 Haverford Ave, Philadelphia, PA 19104
+                215-349-6734
+                Wednesday, 10 AM–1 PM
+                Provides pre-packed bags or boxes of food
+              </h4>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Add more cards here... -->
+    
+        <!-- Card 7 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2 class="card-title title-7">Saint Ignatius Of Loyola Food Pantry</h2>
+            </div>
+            <div class="card-back">
+              <h4 class="card-desc desc-7">Details:
+                636 N 43rd St, Philadelphia, PA 19104
+                215-386-5065
+                Tuesday, 10 AM–12 PM
+                Provides a bag of groceries, once a month
+                Federally funded
+              </h4>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Add more cards here... -->
+    
+        <!-- Card 8 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2 class="card-title title-8">West Philadelphia SDA Grocery Window Food Pantry</h2>
+            </div>
+            <div class="card-back">
+              <h4 class="card-desc desc-8">Details:
+                4527 Haverford Ave, Philadelphia, PA 19139
+                215-222-5707
+                4th Sunday of the month, 12AM - 2PM
+                Choice pantry
+              </h4>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Add more cards here... -->
+    
+        <!-- Card 9 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2 class="card-title title-9">Church Of The Holy Apostles Food Distribution Center</h2>
+            </div>
+            <div class="card-back">
+              <h4 class="card-desc desc-9">Details:
+                260 S 51st St, Philadelphia, PA 19139
+                267-908-3287
+                3rd Wednesday of the month, 10:30AM - 12:00PM 
+                Provides pre-packed bags or boxes of food
+              </h4>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Add more cards here... -->
+    
+        <!-- Card 10 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2 class="card-title title-10">Wharton Wesley Helping Hands Food Pantry</h2>
+            </div>
+            <div class="card-back">
+              <h4 class="card-desc desc-10">Details:
+                5341 Catharine St, Philadelphia, PA 19143
+                215-472-6777
+                Wednesday, 9 AM–12 PM
+                Provides grocery-type items, such as canned food and fresh products
+              </h4>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Add more cards here... -->
+    
+        <!-- Card 11 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2 class="card-title title-11">Church Of Christian Compassion Food Pantry</h2>
+            </div>
+            <div class="card-back">
+              <h4 class="card-desc desc-11">Details:
+                6121 Cedar Ave, Philadelphia, PA 19143
+                215-472-9040
+                Monday 9:30AM-11PM, Tuesday & Wednesday 8:30AM-11PM
+                Provides grocery-style items that you can cook for yourself
+              </h4>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Add more cards here... -->
+    
+        <!-- Card 12 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2 class="card-title title-12">Saint Cyprian Church Food Pantry</h2>
+            </div>
+            <div class="card-back">
+              <h4 class="card-desc desc-12">Details:
+                525 S 63rd St, Philadelphia, PA 19143
+                215-747-3250
+                Wednesday & Monday, 9:30–11:15 AM, 
+                Provides hot meals, food bags, clothing, and prayers
+              </h4>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Add more cards here... -->
+    
+        <!-- Card 13 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2 class="card-title title-13">Salvation Army West Philadelphia Corps Food Pantry Center</h2>
+            </div>
+            <div class="card-back">
+              <h4 class="card-desc desc-13">Details:
+                5501 Market St, Philadelphia, PA 19139
+                215-474-1009
+                Tuesday, Wednesday, Thursday 9AM-1PM
+                Provide fresh produce, diaries, meats, diapers, wipes, etc
+              </h4>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Add more cards here... -->
+    
+        <!-- Card 14 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2 class="card-title title-14">ECS Saint Barnabas Mission Food Pantry</h2>
+            </div>
+            <div class="card-back">
+              <h4 class="card-desc desc-14">Details:
+                6006 W Girard Ave, Philadelphia, PA 19151
+                215-528-5400
+                Tuesday to Friday, 10AM-2PM
+                Provides freezable & healthy meals, a behavioral clinic, and much more
+              </h4>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Add more cards here... -->
+    
+        <!-- Card 15 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2 class="card-title title-15">Calvary Agape Outreach Services Food Pantry</h2>
+            </div>
+            <div class="card-back">
+              <h4 class="card-desc desc-15">Details:
+                6114 Haverford Ave, Philadelphia, PA 19151
+                215-472-3460
+                Tuesday & Friday, 10-11AM
+                Provides hot lunches, clothes, and events
+              </h4>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Add more cards here... -->
+    
+        <!-- Card 16 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2 class="card-title title-16">Universal Family Resource Food Pantry</h2>
+            </div>
+            <div class="card-back">
+              <h4 class="card-desc desc-16">Details:
+                5720 Media St, Philadelphia, PA 19151
+                215-581-5502
+                Monday to Friday, 8AM-3:30PM
+                Provides pre-packed or boxed foods
+              </h4>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Add more cards here... -->
+    
+        <!-- Card 17 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2 class="card-title title-17">Good Samaritan Baptist Church Food Cupboard & Pantry</h2>
+            </div>
+            <div class="card-back">
+              <h4 class="card-desc desc-17">Details:
+                6148-6150 Lansdowne Ave, Philadelphia, PA 19151
+                610-764-7995
+                Wednesday 9:00 AM - 1:00 PM
+                Choice pantry and pre-packed/boxed foods
+              </h4>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Add more cards here... -->
+    
+        <!-- Card 18 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2 class="card-title title-18">Freedom Development Corporation Food Pantry</h2>
+            </div>
+            <div class="card-back">
+              <h4 class="card-desc desc-18">Details:
+                6100 W Columbia Ave, Philadelphia, PA 19151
+                215-477-0800
+                Tuesday, 11:30 AM–1 PM
+                Choice pantry and pre-packed/boxed foods
+              </h4>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Add more cards here... -->
+    
+        <!-- Card 19 -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2 class="card-title title-19">Living Waters Baptist Church Food Distribution Center</h2>
+            </div>
+            <div class="card-back">
+              <h4 class="card-desc desc-19">Details:
+                7501 Brookhaven Rd, Philadelphia, PA 19151
+                215-877-1274
+                Saturday 10:00 AM - 4:00 PM
+                Pre-packed or boxed foods
+              </h4>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+  <footer>
+    <h2>Have Questions? Contact Us!</h2>
+    <h4>215-326-437</h4>
+    <h4>stoppingfoodinsecurity@gmail.com</h4>
+    <h4>Disclaimer: This website is NOT real and just an academic project</h4>
+  </footer>
+
+</body>
+</html>
